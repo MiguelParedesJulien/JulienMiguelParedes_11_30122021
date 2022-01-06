@@ -1,0 +1,95 @@
+.infoContainer {
+    margin-top: 3rem;
+    color: var(--color-prim);
+    font-weight: 500;
+  }
+  
+  .elemLeft {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .titreLoc {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .lieux {
+    margin-top: 0.3rem;
+    text-align: left;
+    font-size: 0.8rem;
+  }
+  
+  .tags ul {
+    display: flex;
+  }
+  
+  .listeTags {
+    font-size: 0.62rem;
+    background-color: var(--color-prim);
+    color: white;
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
+    margin-right: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  
+  .nom h3 {
+    font-weight: 500;
+    margin-right: 0.8rem;
+    text-align: right;
+  }
+  
+  .proprio img {
+    border-radius: 50%;
+    width: 3rem;
+  }
+  
+  .proprio {
+    display: flex;
+  }
+  
+  .elemRight {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .titreLoc {
+      font-size: 2.2rem;
+    }
+  
+    .lieux {
+      font-size: 1.2rem;
+    }
+  
+    .listeTags {
+      font-size: 0.85rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+  
+    .proprio img {
+      width: 5rem;
+    }
+  
+    .infoContainer {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .elemRight {
+      flex-direction: column-reverse;
+      margin-top: 0;
+    }
+  
+    .drop {
+      display: flex;
+      gap: 1.5rem;
+    }
+  
+    .drop .dropdown {
+      width: 100%;
+    }
+  }

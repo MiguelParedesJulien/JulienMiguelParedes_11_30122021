@@ -1,0 +1,50 @@
+.cardSection {
+    max-width: 1240px;
+  }
+  
+  .cardUl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  
+  .locationCard {
+    position: relative;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .locationCard h3 {
+    position: absolute;
+    bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 0.5rem;
+    color: white;
+    z-index: 2;
+  }
+  
+  .imgCard {
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 700px) {
+    .cardUl {
+      justify-content: space-around;
+    }
+    .cardSection {
+      background-color: var(--color-background);
+      border-radius: 25px;
+      padding: 0.6rem;
+      margin-top: 1rem;
+    }
+  
+    .locationCard {
+      width: 315px;
+    }
+  
+    .imgCard {
+      height: 240px;
+    }
+  }
