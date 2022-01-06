@@ -26,11 +26,13 @@ header {
     display: flex;
     gap: 0.62rem;
     flex-direction: row;
+    list-style: none;
   }
   
   nav li a {
     text-decoration: none;
-    color: var(--color-prim);
+    /*color: var(--color-prim);*/
+    color:#FF6060;
     font-size: 0.6rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -65,7 +67,7 @@ header {
     }
   
     h1 .imgHeader {
-      height: 4.25rem;
+      height: 3.25rem;
     }
   
     nav ul {
