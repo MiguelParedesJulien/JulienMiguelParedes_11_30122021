@@ -1,0 +1,39 @@
+.home .banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../img/imgAccueil.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .about .banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../img/imgPropos.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .banner {
+    border-radius: 25px;
+    height: 223px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .banner h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .banner {
+      justify-content: center;
+    }
+    .banner h2 {
+      font-size: 3rem;
+    }
+    .banner h2 br {
+      display: none;
+    }
+  }
