@@ -10,6 +10,8 @@ main {
   h2 {
     font-weight: 700;
     font-size: 4.5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
   
   p {
@@ -30,10 +32,10 @@ main {
       font-size: 5.5rem;
     }
     p {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
     main a {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
   }
   

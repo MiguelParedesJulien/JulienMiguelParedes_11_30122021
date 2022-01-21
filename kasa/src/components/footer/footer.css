@@ -5,7 +5,6 @@
     left: 0;
     width: 100%;
     margin-top: 2rem;
-    height: 210px;
   }
   
   footer {
@@ -16,13 +15,18 @@
     font-weight: 500;
     padding-top: 3rem;
   }
+
+  .footer h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
   
   .imgFooter {
     height: 3rem;
     margin-bottom: 2rem;
   }
   
-  @media screen and (min-width: 500px) {
+  @media screen and (max-width: 500px) {
     .imgFooter {
       height: 3rem;
     }
@@ -33,9 +37,10 @@
   
   @media screen and (min-width: 768px) {
     .imgFooter {
-      height: 4.25rem;
+      height: 3rem;
     }
     .pFooter {
       font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
   }

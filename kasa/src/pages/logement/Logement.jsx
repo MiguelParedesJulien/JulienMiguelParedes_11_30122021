@@ -17,21 +17,21 @@ class Logement extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true });
-    fetch("../../data/data.json")
+    fetch("/data.json")
       .then((response) => response.json())
-      .then((jsonResponse) =>
+      .then((jsonResponse) => {
         this.setState({
           data: jsonResponse.find(
             (logement) => logement.id === this.props.match.params.id
           ),
           isLoading: false,
         })
-      )
-      .catch((error) => console.log(error));
+      }).catch((error) => console.log(error));
   }
 
   render() {
-    console.log(this.state.data);
+    // console.log(this.props.match.params.id)
+    // console.log(this.state.data);
 
     const page = this.state.data ? (
       <div>

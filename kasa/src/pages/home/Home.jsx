@@ -22,9 +22,10 @@ class Home extends Component {
 
   componentDidMount() {
     this.setState({ isLoading: true });
-    fetch("data/data.json")
+    fetch("/data.json")
       .then((response) => response.json())
       .then((jsonResponse) => {
+        console.log(jsonResponse);
         this.setState({ data: jsonResponse, isLoading: false });
       })
       .catch((error) => console.log(error));

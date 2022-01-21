@@ -35,6 +35,11 @@
   
   .flecheDown {
     transform: rotate(180deg);
+    cursor: pointer;
+  }
+
+  .flecheUp {
+    cursor: pointer;
   }
   
   @media screen and (min-width: 768px) {
