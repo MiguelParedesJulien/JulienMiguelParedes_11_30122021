@@ -44,7 +44,7 @@ header {
   
   @media screen and (min-width: 500px) {
     header {
-      margin: 2rem;
+      padding: 2rem;
       margin-bottom: 2.5rem;
     }
     h1 .imgHeader {

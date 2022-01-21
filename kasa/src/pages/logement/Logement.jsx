@@ -16,32 +16,41 @@ class Logement extends Component {
   }
 
   componentDidMount() {
+    document.body.scrollIntoView();
     this.setState({ isLoading: true });
     fetch("/data.json")
       .then((response) => response.json())
       .then((jsonResponse) => {
-        this.setState({
-          data: jsonResponse.find(
-            (logement) => logement.id === this.props.match.params.id
-          ),
-          isLoading: false,
-        })
+        setTimeout(() => {
+          this.setState ({
+            data: jsonResponse.find(
+              (logement) => logement.id === this.props.match.params.id
+            ),
+            isLoading: false,
+          })
+        }, 3000)
       }).catch((error) => console.log(error));
   }
 
   render() {
     // console.log(this.props.match.params.id)
     // console.log(this.state.data);
-
-    const page = this.state.data ? (
+    const page = this.state.isLoading ? (
       <div>
-        <Slider data={this.state.data} />
-        <InfoLoc data={this.state.data} />
+        {/* <Loader /> */}
+        Loading...
       </div>
     ) : (
-      <div>
-        <Error404 />
-      </div>
+      this.state.data ? (
+        <div>
+          <Slider data={this.state.data} />
+          <InfoLoc data={this.state.data} />
+        </div>
+      ) : (
+        <div>
+          <Error404 />
+        </div>
+      )
     );
 
     return (
