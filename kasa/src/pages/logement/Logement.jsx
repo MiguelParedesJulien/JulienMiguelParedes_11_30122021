@@ -22,14 +22,13 @@ class Logement extends Component {
       .then((response) => response.json())
       .then((jsonResponse) => {
         setTimeout(() => {
-          this.setState ({
-            data: jsonResponse.find(
-              (logement) => logement.id === this.props.match.params.id
-            ),
+          this.setState({
+            data: jsonResponse.find((logement) => logement.id === this.props.match.params.id),
             isLoading: false,
-          })
-        }, 3000)
-      }).catch((error) => console.log(error));
+          });
+        }, 500);
+      })
+      .catch((error) => console.log(error));
   }
 
   render() {
@@ -40,17 +39,15 @@ class Logement extends Component {
         {/* <Loader /> */}
         Loading...
       </div>
+    ) : this.state.data ? (
+      <div>
+        <Slider data={this.state.data} />
+        <InfoLoc data={this.state.data} />
+      </div>
     ) : (
-      this.state.data ? (
-        <div>
-          <Slider data={this.state.data} />
-          <InfoLoc data={this.state.data} />
-        </div>
-      ) : (
-        <div>
-          <Error404 />
-        </div>
-      )
+      <div>
+        <Error404 />
+      </div>
     );
 
     return (
